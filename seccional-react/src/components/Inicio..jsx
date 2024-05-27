@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Swal from 'sweetalert2'
+
 
 const Inicio = () => {
   const [reportes, setReportes] = useState([]);
@@ -22,20 +24,37 @@ const Inicio = () => {
 
   // Función para manejar la eliminación de un reporte
   const handleDeleteReporte = (id) => {
+
     fetch(`http://localhost:5000/api/reportes/${id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        
         // Actualizar la lista de reportes después de eliminar uno
         setReportes((prevReportes) =>
           prevReportes.filter((reporte) => reporte.id !== id)
         );
+        Swal.fire({
+          position: "top-end",
+          icon: "info",
+          title: "Se borro correctamente",
+          showConfirmButton: false,
+          timer: 1500
+        });
       })
       .catch((error) => {
         console.error("Error:", error);
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "El reporte no se pudo borrar",
+          showConfirmButton: false,
+          timer: 1500
+        });
       });
+      
   };
 
   return (

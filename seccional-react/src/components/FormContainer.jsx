@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Row, Col, Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
+import Swal from 'sweetalert2'
+
+
 export const FormContainer = () => {
   const [formData, setFormData] = useState({
     id: '',
@@ -105,7 +108,13 @@ export const FormContainer = () => {
       .catch((error) => {
         console.error('Error:', error);
       });
-
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Reporte agregado correctamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
   };
 
   return (

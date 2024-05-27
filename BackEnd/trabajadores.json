@@ -1,14 +1,37 @@
 {
   "servicio": [
-    "Servicio A",
-    "Servicio B",
-    "Servicio C",
-    "Servicio $"
-  ],
+    "Rotativo 301",
+    "Rotativo 302",
+    "Rotativo 303",
+    "Rotativo 304",
+    "Rotativo 305",
+    "Rotativo 306",
+    "Rotativo 307",
+    "Rotativo 308",
+    "Rotativo 309",
+    "Rotativo 310",
+    "Rotativo 311",
+    "Rotativo 312",
+    "Maniobra Rotacion 1",
+    "Maniobra Rotacion 2",
+    "Maniobra Rotacion 3",
+    "Maniobra Rotacion 4",
+    "Maniobra Rotacion 5",
+    "Maniobra Rotacion 6",
+    "Maniobra Rotacion 7",
+    "Remolque Sabado",
+    "Remolque Lunes"
+    ],
   "locomotora": [
-    "Locomotora 1",
-    "Locomotora 2",
-    "Locomotora 3"
+    "GM-12 N°A605",
+    "GM-12 N°A623",
+    "GM-22 N°A711",
+    "GM-22 N°A712",
+    "GM-22 N°A713",
+    "GM-22 N°A701",
+    "GM-22 N°A713",
+    "ALCO DL535T N°657",
+    "ALCO DL535T N°658"
   ],
   "siendo": [
     "Conductor",
